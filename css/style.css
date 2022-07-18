@@ -73,7 +73,7 @@ button {
     top: 0;
     right: 0;
     transform: translateX(100%);
-    transition-duration: 0.7s;
+    transition-duration: 0.4s;
     z-index: 999;
     -webkit-transform: translateX(100%);
     -moz-transform: translateX(100%);
