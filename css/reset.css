@@ -29,3 +29,10 @@ html {
   display: flex;
   justify-content: center;
 }
+
+.page {
+  position: relative;
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+}

@@ -67,7 +67,7 @@ button {
 /*------------------------gnb---------------------------*/
 #gnb {
     background: #fff;
-    position: fixed;
+    position: absolute;
     width: 80%;
     height: 100vh;
     top: 0;
