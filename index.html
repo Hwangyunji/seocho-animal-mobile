@@ -32,12 +32,30 @@
             <nav id="icon-menu">
                 <button id="toggle-btn"><i class="bi bi-list"></i></button>
             </nav>
+
             <nav id="gnb">
+
                 <ul>
-                    <li><a href="center.html">센터 소개</a></li>
-                    <li><a href="process.html">입양 안내</a></li>
-                    <li><a href="#">커뮤니티</a></li>
-                    <li><a href="#">교육</a></li>
+                    <li id="cate01" class="gnbMenu"><a href="#">센터 소개</a>
+                        <ol class="slideSubMenu sub01">
+                            <li class="subCate"><a href="center.html">센터 소개</a></li>
+                            <li class="subCate"><a href="rule.html">이용 수칙</a></li>
+                            <li class="subCate"><a href="map.html">오시는길</a></li>
+                        </ol>
+                    </li>
+
+                    <li id="cate02" class="gnbMenu"><a href="#">입양 안내</a>
+                        <ol class="slideSubMenu sub02">
+                            <li class="subCate"><a href="process.html">입양 절차</a></li>
+                            <li class="subCate"><a href="notice.html">입양 공고</a></li>
+                            <li class="subCate"><a href="#">입양 후 소식</a></li>
+                        </ol>
+                    </li>
+
+                    <li id="cate03" class="gnbMenu"><a href="#">커뮤니티</a></li>
+
+                    <li id="cate04" class="gnbMenu"><a href="#">교육</a></li>
+
                 </ul>
                 <button id="btn-close"><i class="bi bi-x"></i></button>
             </nav>
@@ -52,9 +70,36 @@
                 </a>
             </div>
 
+
+            <!--카카오 상담 버튼-->
+            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=당신의api아이디"></script>
+
             <div class="kakao">
-                <a href="#"><img src="./images/kakao.png" alt="카카오"></a>
+                <button type="button" id="kakao-talk-channel-chat-button" data-channel-public-id="_xcLqmC"
+                style="border: 0px; background-color:transparent; cursor:pointer;" onclick="open_kakao_channel();">
+                <!-- 본인이 제작한 이미지를 img에 연결하면 됨 -->
+                <img alt="" src="http://bed072.godohosting.com/web/talk_btn01.png" style="width: 50px; height: 50px;">
+              </button>
             </div>
+
+            <script>
+                // 카카오 채널 열기
+                function open_kakao_channel() {
+                  Kakao.Channel.addChannel({
+                    channelPublicId: '_xcLqmC'
+                  });
+                }
+            
+                (function (d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = '//developers.kakao.com/sdk/js/kakao.plusfriend.min.js';
+                  fjs.parentNode.insertBefore(js, fjs);
+                })(document, 'script', 'kakao-js-sdk');
+              </script>
+              
+
             <div class="protection">
                 <h2>보호동물</h2>
                 <a href="notice.html" class="add-btn">더보기+</a>

@@ -2,7 +2,7 @@
 @import url('notice.css');
 @import url('detail.css');
 @import url('process.css');
-@import url('rules.css');
+@import url('rule.css');
 @import url('center.css');
 @import url('map.css');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
@@ -22,6 +22,7 @@
 
 
 body {
+    width: 100%;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -67,6 +68,7 @@ button {
 
 /*------------------------gnb---------------------------*/
 #gnb {
+    display: none;
     background: #fff;
     position: absolute;
     width: 80%;
@@ -76,18 +78,14 @@ button {
     transform: translateX(100%);
     transition-duration: 0.4s;
     z-index: 999;
-    -webkit-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    -o-transform: translateX(100%);
 }
 
-#gnb.on {
+ #gnb.on {
+    display: block;
     transform: translateX(0%);
-    /*gnb켜지면 메인 어두워지게(추후수정)*/
 }
 
-#gnb a:hover {
+#gnb .gnbMenu a:hover {
     color: var(--main-color);
     font-weight: 700;
 }
@@ -99,11 +97,17 @@ button {
     top: 55px;
 }
 
-#gnb ul li {
-    border-bottom: 1px solid rgb(200, 200, 200);
+#gnb .gnbMenu > a {
+    border-bottom: 1px solid #F4F4F4;
 }
 
-#gnb ul li a {
+#gnb .gnbMenu {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#gnb .gnbMenu a {
     display: block;
     padding-left: 20px;
     padding-right: 20px;
@@ -112,6 +116,52 @@ button {
     font-size: 18px;
     color: var(--text-color);
 }
+
+/*디테일 서브 메뉴*/
+#gnb .slideSubMenu .subCate a {
+    padding-top: 7px;
+    padding-left: 30px;
+}
+
+#cate01 .slideSubMenu .subCate:last-child {
+    margin-bottom: 0px;
+    border-bottom: 1px solid #F4F4F4;
+    width: 100%;
+}
+
+#cate02 .slideSubMenu .subCate:last-child {
+    margin-bottom: 0px;
+    border-bottom: 1px solid #F4F4F4;
+    width: 100%;
+}
+
+#gnb .slideSubMenu a {
+    color: rgb(49, 49, 49);
+    font-size: 12px;
+}
+
+#gnb .slideSubMenu a:hover {
+    color: #fff;
+    background: var(--main-color);
+}
+
+#gnb .sub01 {
+    display: none;
+} 
+
+#cate01:hover > .sub01 {
+    display: block;
+}
+
+#gnb .sub02 {
+    display: none;
+}
+
+#cate02:hover > .sub02 {
+    display: block;
+}
+
+
 
 /*닫기 버튼*/
 #btn-close {
@@ -178,8 +228,8 @@ button {
 }
 
 #main .kakao img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 15px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
 }
