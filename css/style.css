@@ -2,7 +2,7 @@
 @import url('notice.css');
 @import url('detail.css');
 @import url('process.css');
-@import url('rule.css');
+@import url('rules.css');
 @import url('center.css');
 @import url('map.css');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
@@ -123,7 +123,7 @@ button {
     padding-left: 30px;
 }
 
-#cate01 .slideSubMenu .subCate:last-child {
+/* #cate01 .slideSubMenu .subCate:last-child {
     margin-bottom: 0px;
     border-bottom: 1px solid #F4F4F4;
     width: 100%;
@@ -133,14 +133,14 @@ button {
     margin-bottom: 0px;
     border-bottom: 1px solid #F4F4F4;
     width: 100%;
-}
+} */
 
 #gnb .slideSubMenu a {
     color: rgb(49, 49, 49);
     font-size: 12px;
 }
 
-#gnb .slideSubMenu a:hover {
+#gnb .slideSubMenu .subCate a:hover {
     color: #fff;
     background: var(--main-color);
 }
@@ -158,6 +158,22 @@ button {
 }
 
 #cate02:hover > .sub02 {
+    display: block;
+}
+
+#gnb .sub03 {
+    display: none;
+}
+
+#cate03:hover > .sub03 {
+    display: block;
+}
+
+#gnb .sub04 {
+    display: none;
+}
+
+#cate04:hover > .sub04 {
     display: block;
 }
 
@@ -228,8 +244,8 @@ button {
 }
 
 #main .kakao img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 15px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
 }
